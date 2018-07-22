@@ -11,10 +11,11 @@ botao.addEventListener("click", function(event){
 	}
 	console.log(paciente);
 
-	var pacienteTr = montaTr(paciente);
+/*	var pacienteTr = montaTr(paciente);
 
 	var tbody = document.querySelector("#tabela-pacientes");
-	tbody.appendChild(pacienteTr);
+	tbody.appendChild(pacienteTr);*/
+	adicionaPacienteNaTabela(paciente);
 
 	form.reset();
 	
@@ -94,4 +95,11 @@ function exibeMensagensErro(erros){
 			ul.appendChild(li);
 		});
 	}
+}
+
+function adicionaPacienteNaTabela(paciente){
+	var pacienteTr = montaTr(paciente);
+	var tabela = document.querySelector("#tabela-pacientes");
+	tabela.appendChild(pacienteTr);
+
 }
